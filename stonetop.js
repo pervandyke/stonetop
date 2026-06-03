@@ -69,6 +69,13 @@ Hooks.once("init", () => {
 		label: "Stonetop Character Sheet",
 	});
 
+	const StonetopNpcSheet = createStonetopNpcSheetClass(StonetopActorSheet);
+	foundry.documents.collections.Actors.registerSheet("stonetop", StonetopNpcSheet, {
+		types: ["npc"],
+		makeDefault: true,
+		label: "Stonetop NPC Sheet",
+	});
+
 	const StonetopSteadingSheet = createStonetopSteadingSheetClass(foundry.appv1.sheets.ActorSheet);
 	foundry.documents.collections.Actors.registerSheet("stonetop", StonetopSteadingSheet, {
 		types: ["steading"],
