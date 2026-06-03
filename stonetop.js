@@ -4,6 +4,7 @@ import { createStonetopItemClass } from "./src/item/StonetopItem.js";
 import { StonetopActorSheet } from "./src/actors/StonetopActorSheet.js";
 import { createStonetopCharacterSheetClass } from "./src/actors/character/StonetopCharacterSheet.js";
 import { createStonetopSteadingSheetClass } from "./src/actors/steading/StonetopSteadingSheet.js";
+import { createStonetopNpcSheetClass } from "./src/actors/npc/StonetopNpcSheet.js";
 import { onReady } from "./src/hooks/Ready.js";
 import { onRenderActorSheet } from "./src/hooks/RenderActorSheet.js";
 import { onRenderPause } from "./src/hooks/RenderPause.js";

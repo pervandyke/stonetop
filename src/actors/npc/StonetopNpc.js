@@ -1,5 +1,4 @@
-import { NpcSnapshot } from "../../model/snapshot/npc/NpcSnaphot.js";
-import { FollowerSnapshot, FollowerSnapshotBuilder } from "../../model/snapshot/character/FollowerSnapshot.js"
+import { FollowerSnapshotBuilder } from "../../model/snapshot/character/FollowerSnapshot.js";
 import { StonetopFlags } from "../../actors/character/StonetopFlags.js";
 
 export class StonetopNpc {
@@ -43,12 +42,12 @@ export class StonetopNpc {
 		await this._flags.setFlag("damage", value);
 	}
 
-    get specialQualities() {
-		return this._flags.getFlag("specialQualities") ?? "";
+    get specialQuality() {
+		return this._flags.getFlag("specialQuality") ?? "";
 	}
 
-	async setSpecialQualities(value) {
-		await this._flags.setFlag("specialQualities", value);
+	async setSpecialQuality(value) {
+		await this._flags.setFlag("specialQuality", value);
 	}
 
     get instinct() {
@@ -74,7 +73,7 @@ export class StonetopNpc {
 				.withArmor(this.armor)
 				.withDamage(this.damage)
 				.withInstinct(this.instinct)
-				.withQualities(this.specialQualities)
+				.withSpecialQuality(this.specialQuality)
 				.withDescription(this.description)
 				.build();
 		}

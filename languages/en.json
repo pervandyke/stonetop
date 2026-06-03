@@ -32,6 +32,7 @@
 			"damage": "Damage",
 			"loyalty": "Loyalty",
 			"moves": "Moves",
+			"description": "Description",
 			"notePlaceholder": "Tags…",
 			"add": "Add Follower"
 		},

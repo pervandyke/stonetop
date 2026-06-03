@@ -3,28 +3,27 @@
 		<div>
 			{{> "stonetop.actor-header"}}
 
-			<section class="flexrow">
+			<section>
 				<div>
 					<section>
 						<div class="stonetop-npc-attrs stonetop-follower-attrs">
-							<div class="cell cell--damage cell--Roll">
-								<span class="cell__title">{{localize "stonetop.followers.damage"}}</span>
+							<div class="stonetop-resource stonetop-resource--small stonetop-resource--follower">
 								<div class="flexrow">
-									<div class="attr-rollable rollable" data-roll="{{stonetop.damage}}"><i class="fas fa-dice-d6"></i></div>
-									<input id="npc-damage" type="text" class="stonetop-follower-damage" value="{{stonetop.damage}}" data-slug="{{slug}}">
+									<button class="stonetop-resource__label stonetop-damage-roll rollable" type="button" data-roll="{{stonetop.damage}}">{{localize "stonetop.followers.damage"}}</button>
+									<input id="npc-damage" type="text" class="stonetop-resource__input" value="{{stonetop.damage}}" data-slug="{{slug}}">
 								</div>								
 							</div>
-							<div class="cell cell--hp cell--Resource">
-								<span class="cell__title">{{localize "stonetop.followers.hp"}}</span>
-								<div class="cell__counter">
-									<input id="npc-hp" type="number" class="stonetop-follower-hp" min="0" value="{{stonetop.hp}}" data-slug="{{slug}}">
+							<div class="stonetop-resource stonetop-resource--small stonetop-resource--follower">
+								<span class="stonetop-resource__label">{{localize "stonetop.followers.hp"}}</span>
+								<div class="stonetop-resource__split">
+									<input id="npc-hp" type="number" class="stonetop-resource__input stonetop-follower-hp" min="0" value="{{stonetop.hp}}" data-slug="{{slug}}">
 									<span>/</span>
-									<input id="npc-max-hp" type="number" class="stonetop-follower-hp-max" min="0" value="{{stonetop.hpMax}}" data-slug="{{slug}}">
+									<input id="npc-max-hp" type="number" class="stonetop-resource__input stonetop-follower-hp-max" min="0" value="{{stonetop.hpMax}}" data-slug="{{slug}}">
 								</div>
 							</div>
-							<div class="cell cell--armor cell--Number">
-								<span class="cell__title">{{localize "stonetop.followers.armor"}}</span>
-								<input id="npc-armor" type="number" class="stonetop-follower-armor" min="0" value="{{stonetop.armor}}" data-slug="{{slug}}">
+							<div id="npc-armor-box" class="stonetop-resource stonetop-resource--small stonetop-resource--follower">
+								<span class="stonetop-resource__label">{{localize "stonetop.followers.armor"}}</span>
+								<input id="npc-armor" class="stonetop-resource__input" type="number" min="0" value="{{stonetop.armor}}" data-slug="{{slug}}">
 							</div>
 						</div>
 					</section>
@@ -37,7 +36,7 @@
 							</div>
 							<div>
 								<span class="stonetop-follower-label">Special Qualities</span>
-								<input id="npc-special-qualities" class="stonetop-follower-metadata-input" type="text" value="{{stonetop.qualities}}">
+								<input id="npc-special-qualities" class="stonetop-follower-metadata-input" type="text" value="{{stonetop.specialQuality}}">
 							</div>
 						</div>
 					</section>

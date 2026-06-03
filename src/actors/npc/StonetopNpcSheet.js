@@ -8,11 +8,11 @@ export function createStonetopNpcSheetClass(Base) {
 
         static get defaultOptions() {
             return foundry.utils.mergeObject(super.defaultOptions, {
-                classes: ["pbta", "stonetop", "sheet", "actor", "npc"],
+                classes: ["stonetop", "sheet", "actor", "npc"],
                 tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
                 dragDrop: [{ dragSelector: ".items-list .item" }],
-				width: 350,
-				height: 500,
+				width: 315,
+				height: 425,
             });
         }
 
@@ -48,7 +48,7 @@ export function createStonetopNpcSheetClass(Base) {
 
             // Special Quality
 			html.find("#npc-special-qualities").on("change", async ev => {
-				await this._stonetopNpc.setSpecialQualities(ev.currentTarget.value);
+				await this._stonetopNpc.setSpecialQuality(ev.currentTarget.value);
 			});
 
             // Instinct
